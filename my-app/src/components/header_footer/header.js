@@ -7,9 +7,23 @@ import IconButton from '@material-ui/core/IconButton';
 class Header extends Component {
   render() {
     return (
-      <div>
-        header
-      </div>
+      <AppBar
+        position="fixed"
+        style={{
+          backgroundColor: '#2f2f2f',
+          boxShadow: 'none',
+          padding: '10px 0px'
+        }}
+      >
+        <ToolBar>
+          <div className="header_logo">
+            <div className="font_righteous header_logo_venue">The Venue</div>
+            <div className="header_logo_title">
+              <p style={{paddingLeft:'10px'}}>musical events</p>
+            </div>
+          </div>
+        </ToolBar>
+      </AppBar>
     )
   };
 };
