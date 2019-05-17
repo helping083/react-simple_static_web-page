@@ -1,5 +1,9 @@
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
+* {
+    min-height: 0;
+    min-width: 0;
+  }
 body {
     padding:0;
     margin:0;
@@ -147,7 +151,23 @@ footer .footer_copyright {
     font-size: 20px;
     padding-left: 7px;
 }
-
+@media only screen and (max-width: 767px) {
+    .artist_name {
+        width: 320px;
+    }
+    .countdown_wrapper {
+        width: 100%;
+    }
+    .countdown_wrapper .countdown_top {
+        font-size: 4vw;
+    }
+    .countdown_wrapper .countdown_time {
+        font-size: 4vw;
+    }
+    .countdown_wrapper .countdown_tag {
+        font-size: 4vw;
+    }
+}
 /*====================
         VENUE NFO
 ======================*/
