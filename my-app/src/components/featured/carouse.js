@@ -9,8 +9,11 @@ const carouse = () => {
         dots: false,
         infinite: true,
         autoplay: true,
-        speed: 700
+        autoplaySpeed: 5000,
+        pauseOnHover: false,
+        speed: 800
     }
+    //todo - change on dynamic instead of static
     return (
         <div
             className="carousel_wrapper"
@@ -19,9 +22,7 @@ const carouse = () => {
                 overflow:'hidden'
             }}
         >
-          <Slider
-            {...settings}
-          >
+          <Slider {...settings}>
             <div>
               <div 
                 className="carrousel_image"
