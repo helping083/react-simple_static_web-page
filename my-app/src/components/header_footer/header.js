@@ -6,11 +6,13 @@ import IconButton from '@material-ui/core/IconButton';
 import SideDrawer from './sideDrawer';
 
 
+
 class Header extends Component {
 
   state={
     isDrawerOpen: false,
-    headerShow:   false
+    headerShow:   false,
+    headerScrol: 0
   }
 
   componentDidMount() {
@@ -18,6 +20,7 @@ class Header extends Component {
   }
 
   handleScroll = () =>{
+    this.setState({headerScrol: window.scrollY})
     if(window.scrollY>0) {
       this.setState({headerShow: true})
     }else {
@@ -26,13 +29,15 @@ class Header extends Component {
   }
 
   toggleDrawer=(value)=>{
-    this.setState({isDrawerOpen: value})
+    this.setState({isDrawerOpen: value});
   }
 
   render() {
     return (
+      <div>
       <AppBar
-        position="fixed"
+        position='fixed'
+        classes={{root: this.state.headerScrol>200 ? 'fadeInDown animated':'HE'}}
         style={{
           backgroundColor: this.state.headerShow ?'#2f2f2f': 'transparent',
           boxShadow: 'none',
@@ -60,6 +65,7 @@ class Header extends Component {
           />
         </ToolBar>
       </AppBar>
+      </div>
     )
   };
 };

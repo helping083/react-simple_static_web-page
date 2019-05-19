@@ -34,6 +34,7 @@ body {
 
 .center_wrapper {
     width: 900px;
+    
     margin:0 auto;
 }
 
@@ -100,7 +101,6 @@ footer .footer_copyright {
     transform: translate(-50%, -50%);   
     border: 2px solid white;
 }
-
 .artist_name .wrapper {
     border: 2px solid white;
     height: 121px;
@@ -111,7 +111,29 @@ footer .footer_copyright {
     padding: 21px 70px 0px 70px;
     text-transform: uppercase;
 }
-
+.animated {
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+ }
+ 
+ 
+ @keyframes fadeInDown {
+    0% {
+     
+       transform: translateY(-100%);
+    }
+    100% {
+       
+       transform: translateY(0);
+    }
+ }
+ 
+ .fadeInDown {
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+ }
 /*====================
         COUNTDOWN
 ======================*/
@@ -166,6 +188,12 @@ footer .footer_copyright {
     }
     .countdown_wrapper .countdown_tag {
         font-size: 4vw;
+    }
+    .vn_wrapper {
+        flex-direction: column;
+    }
+    .vn_wrapper:first-child .vn_outer {
+        margin-bottom: 100px;
     }
 }
 /*====================
