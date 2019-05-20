@@ -34,7 +34,7 @@ body {
 
 .center_wrapper {
     width: 900px;
-    
+    overflow: hidden;
     margin:0 auto;
 }
 

@@ -31,7 +31,6 @@ class timeUntill extends Component {
             seconds: seconds,
             minutes: minutes
         });
-        console.log(this.state)
       }
       
     };
