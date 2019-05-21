@@ -6,8 +6,8 @@ const MyButton = (props) => {
     return (
         <Button
             href="https://material-ui.com/demos/buttons/"
-            variant=" contained"
-            size ="smal"
+            variant="contained"
+            size ="small"
             style={{
                 background: props.bck,
                 color: props.color
